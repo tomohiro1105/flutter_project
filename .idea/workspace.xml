@@ -1,10 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c8a4172a-fff1-415f-b90c-fa251b1bad96" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1pjR1kwcqJYdYyUeive1t10NLhj" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
-    <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="android.sdk.path" value="$PROJECT_DIR$/../AppData/Local/Android/Sdk" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../flutter_development/flutter/bin/cache/dart-sdk" />
     <property name="project.structure.last.edited" value="SDK Location" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="terminal" />
+    <property name="settings.editor.selected.configurable" value="dart.settings" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="RunManager">
+    <configuration name="main.dart" type="FlutterRunConfigurationType" factoryName="Flutter">
+      <option name="filePath" value="$PROJECT_DIR$/tetris_mobile_app/lib/main.dart" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c8a4172a-fff1-415f-b90c-fa251b1bad96" name="Default Changelist" comment="" />
+      <created>1615694299544</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1615694299544</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="137" y="38" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1615695804291">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="137" y="38" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.768@0.0.1366.768" timestamp="1615695804291" />
+    <state x="412" y="173" key="#com.intellij.ide.util.TreeFileChooserDialog" timestamp="1615695492791">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="412" y="173" key="#com.intellij.ide.util.TreeFileChooserDialog/0.0.1366.768@0.0.1366.768" timestamp="1615695492791" />
+    <state x="100" y="100" width="1166" height="568" key="AVDManager" timestamp="1615695500485">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="100" y="100" width="1166" height="568" key="AVDManager/0.0.1366.768@0.0.1366.768" timestamp="1615695500485" />
+    <state x="487" y="167" key="FileChooserDialogImpl" timestamp="1615695775608">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="487" y="167" key="FileChooserDialogImpl/0.0.1366.768@0.0.1366.768" timestamp="1615695775608" />
+    <state x="564" y="281" key="Github.ShareDialog" timestamp="1615694332307">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="564" y="281" key="Github.ShareDialog/0.0.1366.768@0.0.1366.768" timestamp="1615694332307" />
+    <state x="443" y="89" key="Github.UntrackedFilesDialog" timestamp="1615694345463">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="443" y="89" key="Github.UntrackedFilesDialog/0.0.1366.768@0.0.1366.768" timestamp="1615694345463" />
+    <state x="216" y="57" key="SettingsEditor" timestamp="1615695799962">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="216" y="57" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1615695799962" />
   </component>
 </project>
