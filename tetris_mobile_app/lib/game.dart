@@ -122,6 +122,7 @@ class GameState extends State{
     });
 
     // TODO: 削除予定　下のreturn Stack();
+    // iwasuji OK
     // return Stack(
     //   children: <Widget>[
     //     Positioned(
