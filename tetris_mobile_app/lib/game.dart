@@ -122,7 +122,7 @@ class GameState extends State{
     });
 
     // TODO: 削除予定　下のreturn Stack();
-    // iwasuji OK
+    // iwasuji OK　→　２度目の確認OK
     // itoi OK
     // return Stack(
     //   children: <Widget>[
