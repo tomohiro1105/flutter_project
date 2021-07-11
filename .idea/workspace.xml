@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c8a4172a-fff1-415f-b90c-fa251b1bad96" name="Default Changelist" comment="">
+    <list default="true" id="c8a4172a-fff1-415f-b90c-fa251b1bad96" name="Default Changelist" comment="packages更新">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -9,7 +11,13 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="Pixel_2_API_28" />
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1pjR1kwcqJYdYyUeive1t10NLhj" />
@@ -27,8 +35,20 @@
     <property name="project.structure.last.edited" value="SDK Location" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="dart.settings" />
+    <property name="settings.editor.selected.configurable" value="flutter.settings" />
     <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager">
     <configuration name="main.dart" type="FlutterRunConfigurationType" factoryName="Flutter">
@@ -49,34 +69,31 @@
     </task>
     <servers />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="3">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
-    <state x="137" y="38" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1615695804291">
-      <screen x="0" y="0" width="1366" height="768" />
-    </state>
-    <state x="137" y="38" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.768@0.0.1366.768" timestamp="1615695804291" />
-    <state x="412" y="173" key="#com.intellij.ide.util.TreeFileChooserDialog" timestamp="1615695492791">
-      <screen x="0" y="0" width="1366" height="768" />
-    </state>
-    <state x="412" y="173" key="#com.intellij.ide.util.TreeFileChooserDialog/0.0.1366.768@0.0.1366.768" timestamp="1615695492791" />
-    <state x="100" y="100" width="1166" height="568" key="AVDManager" timestamp="1615695500485">
-      <screen x="0" y="0" width="1366" height="768" />
-    </state>
-    <state x="100" y="100" width="1166" height="568" key="AVDManager/0.0.1366.768@0.0.1366.768" timestamp="1615695500485" />
-    <state x="487" y="167" key="FileChooserDialogImpl" timestamp="1615695775608">
-      <screen x="0" y="0" width="1366" height="768" />
-    </state>
-    <state x="487" y="167" key="FileChooserDialogImpl/0.0.1366.768@0.0.1366.768" timestamp="1615695775608" />
-    <state x="564" y="281" key="Github.ShareDialog" timestamp="1615694332307">
-      <screen x="0" y="0" width="1366" height="768" />
-    </state>
-    <state x="564" y="281" key="Github.ShareDialog/0.0.1366.768@0.0.1366.768" timestamp="1615694332307" />
-    <state x="443" y="89" key="Github.UntrackedFilesDialog" timestamp="1615694345463">
-      <screen x="0" y="0" width="1366" height="768" />
-    </state>
-    <state x="443" y="89" key="Github.UntrackedFilesDialog/0.0.1366.768@0.0.1366.768" timestamp="1615694345463" />
-    <state x="216" y="57" key="SettingsEditor" timestamp="1615695799962">
-      <screen x="0" y="0" width="1366" height="768" />
-    </state>
-    <state x="216" y="57" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1615695799962" />
+    <state x="137" y="38" key="#com.intellij.execution.impl.EditConfigurationsDialog" />
+    <state x="137" y="38" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.768@0.0.1366.768" />
+    <state x="412" y="173" key="#com.intellij.ide.util.TreeFileChooserDialog" />
+    <state x="412" y="173" key="#com.intellij.ide.util.TreeFileChooserDialog/0.0.1366.768@0.0.1366.768" />
+    <state x="100" y="100" width="1166" height="568" key="AVDManager" />
+    <state x="100" y="100" width="1166" height="568" key="AVDManager/0.0.1366.768@0.0.1366.768" />
+    <state x="487" y="167" key="FileChooserDialogImpl" />
+    <state x="487" y="167" key="FileChooserDialogImpl/0.0.1366.768@0.0.1366.768" />
+    <state x="564" y="281" key="Github.ShareDialog" />
+    <state x="564" y="281" key="Github.ShareDialog/0.0.1366.768@0.0.1366.768" />
+    <state x="443" y="89" key="Github.UntrackedFilesDialog" />
+    <state x="443" y="89" key="Github.UntrackedFilesDialog/0.0.1366.768@0.0.1366.768" />
+    <state x="216" y="57" key="SettingsEditor" />
+    <state x="216" y="57" key="SettingsEditor/0.0.1366.768@0.0.1366.768" />
   </component>
 </project>
