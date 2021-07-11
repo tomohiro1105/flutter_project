@@ -19,14 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c8a4172a-fff1-415f-b90c-fa251b1bad96" name="Default Changelist" comment="game.dart 　&#10;不具合がある状態で一旦コミット。109行目　drawBlocksメソッド付近&#10;---------------------&#10;subBlocksにPositionedの要素を入れて表示されると、ブロックが表示されない不具合改修（だだ配列に詰めないでブロックを表示するとちゃんと表示される）。これが本当に原因なのか特定も必要。">
-      <change beforePath="$PROJECT_DIR$/.idea/flutter_project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/flutter_project.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tetris_mobile_app/lib/game.dart" beforeDir="false" afterPath="$PROJECT_DIR$/tetris_mobile_app/lib/game.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tetris_mobile_app/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/tetris_mobile_app/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tetris_mobile_app/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/tetris_mobile_app/pubspec.yaml" afterDir="false" />
-    </list>
+    <list default="true" id="c8a4172a-fff1-415f-b90c-fa251b1bad96" name="Default Changelist" comment="2021/07/11 設定ファイルも含めすべてコミット" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -98,7 +91,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624774742363</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="2021/07/11 設定ファイルも含めすべてコミット">
+      <created>1626002253813</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1626002253813</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -172,7 +172,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="環境構築一発目" />
     <MESSAGE value="game.dart 　&#10;不具合がある状態で一旦コミット。109行目　drawBlocksメソッド付近&#10;---------------------&#10;subBlocksにPositionedの要素を入れて表示されると、ブロックが表示されない不具合改修（だだ配列に詰めないでブロックを表示するとちゃんと表示される）。これが本当に原因なのか特定も必要。" />
-    <option name="LAST_COMMIT_MESSAGE" value="game.dart 　&#10;不具合がある状態で一旦コミット。109行目　drawBlocksメソッド付近&#10;---------------------&#10;subBlocksにPositionedの要素を入れて表示されると、ブロックが表示されない不具合改修（だだ配列に詰めないでブロックを表示するとちゃんと表示される）。これが本当に原因なのか特定も必要。" />
+    <MESSAGE value="2021/07/11 設定ファイルも含めすべてコミット" />
+    <option name="LAST_COMMIT_MESSAGE" value="2021/07/11 設定ファイルも含めすべてコミット" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1203" y="0" key="#Project_Structure" timestamp="1624507945036">
@@ -273,6 +274,14 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="263" y="133" key="IDE.errors.dialog/0.0.1366.768/0.-720.1280.720@0.0.1366.768" timestamp="1618201428318" />
+    <state x="129" y="59" key="MergeDialog" timestamp="1626003530468">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="129" y="59" key="MergeDialog/0.0.1366.768@0.0.1366.768" timestamp="1626003530468" />
+    <state x="321" y="145" key="MultipleFileMergeDialog" timestamp="1626003532673">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="321" y="145" key="MultipleFileMergeDialog/0.0.1366.768@0.0.1366.768" timestamp="1626003532673" />
     <state x="475" y="86" key="RollbackChangesDialog" timestamp="1624593507863">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
@@ -282,10 +291,11 @@
     </state>
     <state x="216" y="57" key="SettingsEditor/0.0.1366.768/-1366.0.1366.768@0.0.1366.768" timestamp="1617513464554" />
     <state x="216" y="57" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1625890421209" />
-    <state x="275" y="116" key="Vcs.Push.Dialog.v2" timestamp="1624774778247">
+    <state x="275" y="116" key="Vcs.Push.Dialog.v2" timestamp="1626002277048">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="275" y="116" key="Vcs.Push.Dialog.v2/0.0.1366.768/-1366.0.1366.768@0.0.1366.768" timestamp="1624774778247" />
+    <state x="275" y="116" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1626002277048" />
     <state x="-1274" y="92" width="1182" height="584" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1624601921540">
       <screen x="-1366" y="0" width="1366" height="768" />
     </state>
