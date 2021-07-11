@@ -86,24 +86,32 @@ class GameState extends State{
   Widget getPositionedSquareContainer(Color color, int x, int y){
     print("color: $color,x: $x,y: $y");
     return Positioned(
-
-      //ビクセル座標(絶対座標)
-      left: x * subBlockWidth,
-      top: y * subBlockWidth,
-      child: Container(
+      //     Positioned(
+        left: x * subBlockWidth,
+        top: y * subBlockWidth,
         width: subBlockWidth - SUB_BLOCK_EDGE_WIDTH,
         height: subBlockWidth - SUB_BLOCK_EDGE_WIDTH,
-        decoration: BoxDecoration(
-          color: color,
-          // BorderまたはBoxDecotationを描画するときに使う形状。circle（円）とrectangle（長方形）が選べる
-          shape: BoxShape.rectangle,
-          borderRadius: BorderRadius.all(const Radius.circular(3.0)),
-        ),
-      ),
+        child: Container(color: Colors.yellow,),
+
+      //     ),
+      //ビクセル座標(絶対座標)
+      // left: x * subBlockWidth,
+      // top: y * subBlockWidth,
+      // child: Container(
+      //   width: subBlockWidth - SUB_BLOCK_EDGE_WIDTH,
+      //   height: subBlockWidth - SUB_BLOCK_EDGE_WIDTH,
+      //   decoration: BoxDecoration(
+      //     color: color,
+      //     // BorderまたはBoxDecotationを描画するときに使う形状。circle（円）とrectangle（長方形）が選べる
+      //     shape: BoxShape.rectangle,
+      //     borderRadius: BorderRadius.all(const Radius.circular(3.0)),
+      //   ),
+      // ),
     );
   }
   // ブロックを描画する
-  //TODO：subBlocksにPositionedの要素を入れて表示されると、ブロックが表示されない不具合改修（だだ配列に詰めないでブロックを表示するとちゃんと表示される）
+  //TODO：subBlocksにPositionedの要素を入れて表示されると、ブロックが表示されない不具合改修
+  // （だだ配列に詰めないでブロックを表示するとちゃんと表示される）
 
   // ignore: missing_return
   Widget drawBlocks(){
@@ -112,34 +120,28 @@ class GameState extends State{
     // サブブロックは、配置可能なWidgetのリストとして宣言する
     print("block : $block");
     List<Positioned> subBlocks = [];
-    // ブロックを作る＝各サブブロックをループし、それぞれをコンテナに変換する
-    block.subBlocks.forEach((subBlock){
-      subBlocks.add(
-          getPositionedSquareContainer(
-        //絶対座標にする（サブブロックの座標はブロックの相対位置なのでそれぞれ足す）
-        subBlock.color, subBlock.x + block.x, subBlock.y + block.y));
-      return Stack(children: subBlocks,);
-    });
+    // // ブロックを作る＝各サブブロックをループし、それぞれをコンテナに変換する
+    // block.subBlocks.forEach((subBlock){
+    //   subBlocks.add(
+    //       getPositionedSquareContainer(
+    //     //絶対座標にする（サブブロックの座標はブロックの相対位置なのでそれぞれ足す）
+    //     subBlock.color, subBlock.x + block.x, subBlock.y + block.y));
+    //   return Stack(children: subBlocks,);
+    // });
+    // print("subBlocks++++++++ : $subBlocks");
 
     // TODO: 削除予定　下のreturn Stack();
-    // return Stack(
-    //   children: <Widget>[
-    //     Positioned(
-    //       left: subBlockWidth,
-    //       top: subBlockWidth,
-    //       width: subBlockWidth - SUB_BLOCK_EDGE_WIDTH,
-    //       height: subBlockWidth - SUB_BLOCK_EDGE_WIDTH,
-    //       child: Container(color: Colors.yellow,),
-    //     ),
-    //     Positioned(
-    //       left: 100.0,
-    //       top: 100.0,
-    //       right: 100.0,
-    //       bottom: 200.0,
-    //       child: Container(color: Colors.green,),
-    //     ),
-    //   ],
-    // );
+    return Stack(
+      children: <Widget>[
+        Positioned(
+          left: 3 * subBlockWidth,
+          top: 2 * subBlockWidth,
+          width: subBlockWidth - SUB_BLOCK_EDGE_WIDTH,
+          height: subBlockWidth - SUB_BLOCK_EDGE_WIDTH,
+          child: Container(color: Colors.yellow,),
+        ),
+      ],
+    );
   }
 
   @override
