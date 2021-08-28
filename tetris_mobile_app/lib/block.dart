@@ -17,7 +17,7 @@ class Block {
   List<List<SubBlock>> orientations = <SubBlock>[].cast<List<SubBlock>>();
   //座標
   int x;
-  int y;
+  int y;// int y;
   //ブロックの現在の向き
   int orientationIndex;
 
@@ -44,7 +44,7 @@ class Block {
   //ブロックの色を取得する
   get color {
     //最初の向きの最初のサブブロックの色を返す
-    return orientations[0][0];
+    return orientations[0][0].color;
   }
 
   // 現在の向き(orientationIndex)のブロックを取得する

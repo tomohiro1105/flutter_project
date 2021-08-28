@@ -2,11 +2,20 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'block.dart';
 import 'dart:math';
+import 'sub_block.dart';
 
 const BLOCKS_X = 10;// ゲームの幅
+
+//LANDED:ブロックが地面にあたった時
+//LANDED_BLOCK:ブロックが別のブロックに着地した時
+//HIT_WALL:ブロックが壁にあたった時
+//HIT_BLOCK:ブロックが別のブロックにあたった時
+//1.50前後3/3
+enum Collision { LANDED, LANDED_BLOCK, HIT_WALL, HIT_BLOCK, NONE}
 const BLOCKS_Y = 20;// ゲームの高さ
 const GAME_AREA_BORDER_WIDTH = 2.0; // ゲームエリアの枠線の幅
-const REFRESH_RATE = 1; //ゲーム速度
+// const REFRESH_RATE = 1; //ゲーム速度
+const REFRESH_RATE = 300; //ゲーム速度
 const SUB_BLOCK_EDGE_WIDTH = 2.0;
 
 
@@ -21,11 +30,14 @@ class Game extends StatefulWidget{
 
 class GameState extends State{
   double subBlockWidth;
-  Duration duration = Duration(seconds: REFRESH_RATE);//ゲームの速度
+  // Duration duration = Duration(seconds: REFRESH_RATE);//ゲームの速度
+  Duration duration = Duration(milliseconds: REFRESH_RATE);//ゲームの速度
+
   GlobalKey _keyGameArea = GlobalKey();
   Block block;
   Timer timer;
   bool isPlaying = false;//ゲーム中のフラグ
+  List<SubBlock> oldSubBlocks;//止まったブロックを保存
 
   //新しいテトリミノをランダムで作成
   Block getNewBlock(){
@@ -57,6 +69,7 @@ class GameState extends State{
   void startGame(){
     print("ゲーム開始");
     isPlaying = true;
+    oldSubBlocks = <SubBlock>[];
     // GlobalKeyを使い、ゲームエリアの現在のcontextにアクセス
     // findRenderObjectでレンダリングされたゲームエリアのオブジェクトを取得できる
     RenderBox renderBoxGame = _keyGameArea.currentContext.findRenderObject();
@@ -76,11 +89,49 @@ class GameState extends State{
 
   //timer引数は必須だが別に使わなくてもいい。
   void onPlay(Timer timer){
+    var status = Collision.NONE;
     //flutterがブロックの位置と状態が変化したことを認識するため、setStateを呼び出す
     setState(() {
-      //ブロックを下に移動させる
-      block.move(BlockMovement.DOWN);
+      //ブロックが地面についたか判定
+      if(!checkAtBottom()){
+        if(!checkAboveBlock()){
+          //ブロックを下に移動させる
+          block.move(BlockMovement.DOWN);
+        }else{
+          status = Collision.LANDED_BLOCK;
+        }
+      } else{
+        status = Collision.LANDED;
+      }
+      if(status == Collision.LANDED || status == Collision.LANDED_BLOCK){
+        // 地面についたブロックを保存
+        block.subBlocks.forEach((subBlock){
+          subBlock.x += block.x;
+          subBlock.y += block.y;
+          oldSubBlocks.add(subBlock);
+        });
+        block = getNewBlock();
+      }
     });
+  }
+  
+  //地面にブロックが着地したか判定
+  bool checkAtBottom(){
+    return  block.y + block.height == BLOCKS_Y;
+  }
+  
+  //他のブロックに着地したか判定
+  bool checkAboveBlock(){
+    for(var oldSubBlock in oldSubBlocks){
+      for(var subBlock in block.subBlocks){
+        var x = block.x + subBlock.x;
+        var y = block.y + subBlock.y;
+        if(x == oldSubBlock.x && y + 1 == oldSubBlock.y){
+          return true;
+        }
+      }
+    }
+    return false;
   }
 
   Widget getPositionedSquareContainer(Color color, int x, int y){
@@ -110,6 +161,13 @@ class GameState extends State{
               subBlock.color, subBlock.x + block.x, subBlock.y + block.y));
       return Stack(children: subBlocks,);
     });
+    oldSubBlocks?.forEach((oldSubBlock) {
+      subBlocks.add(
+          getPositionedSquareContainer(
+            //絶対座標にする（サブブロックの座標はブロックの相対位置なのでそれぞれ足す）
+              oldSubBlock.color, oldSubBlock.x, oldSubBlock.y));
+      return Stack(children: subBlocks,);
+    });
     return Stack(children: subBlocks,);
   }
 
@@ -125,7 +183,7 @@ class GameState extends State{
         decoration: BoxDecoration(
           color: Colors.indigo[800],
           border:  Border.all(
-            width: 2.0,
+            width: GAME_AREA_BORDER_WIDTH,
             color: Colors.white
           ),
          //すべての範囲の border を作るクラス　radiusは半径の意 circularは円形の意
