@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:tetris_mobile_app/next_block.dart';
 
+import 'game.dart';
 //importしている「material.dart」は、マテリアルデザインのUIがまとめられたパッケージです。
 import 'score_bar.dart';
-import 'game.dart';
 
 //Widget：FlutterのUIを構築しているパーツのことをWidget
 // コンストラクタでrunApp関数を呼び出し
@@ -45,7 +45,8 @@ class _TetrisState extends State {
         centerTitle: true,
         backgroundColor: Colors.purple,
       ),
-      body: SafeArea(//SafeArea を使用すると OS に関わらず適切な領域にウィジェットを収めてくれます
+      body: SafeArea(
+        //SafeArea を使用すると OS に関わらず適切な領域にウィジェットを収めてくれます
         //ボディ部の画面
         child: Column(
           children: [
@@ -69,7 +70,9 @@ class _TetrisState extends State {
                       flex: 3,
                       child: Padding(
                           padding: EdgeInsets.fromLTRB(10.0, 10.0, 5.0, 10.0),
-                          child: Game(key:_keyGame)),//ゲームwidgetに置き換える。グローバルキーをゲームのコンストラクターに渡す。
+                          child: Game(
+                              key:
+                                  _keyGame)), //ゲームwidgetに置き換える。グローバルキーをゲームのコンストラクターに渡す。
                     ),
                     Flexible(
                       //右画面
@@ -80,30 +83,33 @@ class _TetrisState extends State {
                           mainAxisSize: MainAxisSize.min,
                           children: [
                             NextBlock(),
-                            SizedBox(height: 30,), //余白
+                            SizedBox(
+                              height: 30,
+                            ), //余白
                             ElevatedButton(
                               //RaisedButtonが非推奨なのでElevatedButton
                               child: Text(
                                 // グローバルキーを使って、GameStateにアクセスする
                                 // isPlaying変数には、gamestateのcurrentStateでアクセスする
-                                _keyGame.currentState != null
-                                    && _keyGame.currentState.isPlaying ////ゲーム中のフラグ
-                                    ? 'End': 'Start',
+                                _keyGame.currentState != null &&
+                                        _keyGame
+                                            .currentState.isPlaying ////ゲーム中のフラグ
+                                    ? 'End'
+                                    : 'Start',
                                 style: TextStyle(
-                                    fontSize: 18,
-                                    color: Colors.grey[200],
+                                  fontSize: 18,
+                                  color: Colors.grey[200],
                                 ),
                               ),
                               onPressed: () {
                                 //Flutterにボタンを再描画させるため、setStateを使う
                                 setState(() {
                                   // グローバルキーを使って、GameStateにアクセスする
-                                  _keyGame.currentState != null
-                                      && _keyGame.currentState.isPlaying
+                                  _keyGame.currentState != null &&
+                                          _keyGame.currentState.isPlaying
                                       ? _keyGame.currentState.endGame()
                                       : _keyGame.currentState.startGame();
                                 });
-
                               },
                             )
                           ],
@@ -129,3 +135,5 @@ class _TetrisState extends State {
 // MaterrialApp
 // ↓
 // Scaffold
+
+//糸井push
